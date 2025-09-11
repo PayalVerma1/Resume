@@ -29,7 +29,7 @@ export default function Blog() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Heading marginBottom="l" variant="heading-strong-xxl">
+      <Heading marginBottom="l" variant="heading-strong-xl">
         Blogs coming soon!
       </Heading>
       
