@@ -189,6 +189,7 @@ const schema: SchemaConfig = {
   type: "Portfolio",
   name: "Payal Verma",
   email: "payal.codes@gmail.com",
+  description: "Personal portfolio of Payal Verma showcasing projects, skills, and resume."
 };
 
 // social links

@@ -205,11 +205,7 @@ const about: About = {
     },
   ],
   },
-studies: {
-  display: true,
-  title: "Education",
-  institutions: [],
-},
+// studies section removed
 };
 
 const blog: Blog = {
