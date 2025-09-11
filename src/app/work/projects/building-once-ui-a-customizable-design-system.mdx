@@ -1,0 +1,42 @@
+---
+title: "TOTO-AI"
+publishedAt: "2025-07-26"
+summary: "A multi-model AI chat application built with Next.js, offering real-time conversations with multiple AI providers and seamless user experience."
+images:
+  - "/images/projects/project-01/cover-01.png"
+  - "/images/projects/project-01/cover-02.png"
+  - "/images/projects/project-01/cover-03.png"
+  - "/images/projects/project-01/cover-04.png"
+link: "https://chat-ai-seven-mu.vercel.app/"
+---
+
+## Overview
+
+TOTO-AI is a flexible and powerful AI chat platform that allows users to interact with multiple AI models within a single unified interface. It is designed for accessibility, customization, and smooth interaction, making it easy for users to switch between different AI providers and manage conversations effectively.
+
+
+## Key Features
+
+- **Multi-Model Support**: Integrated multiple AI providers such as Groq, OpenAI, and Gemini, giving users the freedom to choose the model that best fits their needs. Grok is offered as the default free option, while others can be enabled as premium.
+- **Chat Management**: Built a structured chat system with conversation history, dynamic titles, and the ability to resume or close chats seamlessly.
+- **Authentication**: Implemented secure login using NextAuth with Google sign-in, ensuring smooth onboarding and user-specific chat data.
+- **Database Integration**: Used Prisma with PostgreSQL for reliable storage of chats, user accounts, and session data.
+- **Modern UI/UX**: Designed an intuitive and responsive front-end using Next.js and Tailwind CSS, with a focus on clean design and accessibility.
+- **Scalable Architecture**: Built APIs using Next.js routes and Axios for handling prompts and responses efficiently.
+
+## Technologies Used
+
+- **Next.js**: For building the front-end and backend routes in a unified framework.
+- **Prisma + PostgreSQL**: For database schema management and persistent storage of user data.
+- **NextAuth**: For authentication with Google login integration.
+- **Groq, OpenAI, Gemini APIs**: For multi-model AI chat capabilities.
+- **Tailwind CSS**: For building a modern, responsive, and consistent UI.
+- **Axios**: For handling API requests between the client and server.
+
+## Challenges and Learnings
+
+One challenge was managing real-time conversations while supporting multiple AI providers. Ensuring smooth switching between models and maintaining a consistent chat history required a well-structured database and clean API design. Another challenge was handling authentication and securing user data without compromising usability. These experiences deepened understanding of scalable backend design, authentication flows, and integration of third-party AI APIs.
+
+## Outcome
+
+TOTO-AI has evolved into a robust and user-friendly AI chat application. Users can now access multiple AI models from one platform, maintain personalized chat histories, and enjoy a responsive and modern UI. This project laid the foundation for further enhancements, such as advanced memory, streaming improvements, and more premium features in the future.
