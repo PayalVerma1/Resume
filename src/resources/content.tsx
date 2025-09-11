@@ -205,6 +205,11 @@ const about: About = {
     },
   ],
   },
+studies: {
+  display: true,
+  title: "Education",
+  institutions: [],
+},
 };
 
 const blog: Blog = {
