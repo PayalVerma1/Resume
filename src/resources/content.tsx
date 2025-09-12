@@ -58,63 +58,22 @@ const about: About = {
   avatar: {
     display: true,
   },
-  calendar: {
-    display: true,
-    link: "https://cal.com",
-  },
+  
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
         Hey! I’m a full stack developer and currently pursuing my B.Tech in Information Technology. I’m based in India and have a strong passion for web development.
-        I got into web dev because I love creating things, it’s super satisfying to bring ideas to life and see them turn into real projects. That passion has pushed me to explore full stack development and gain hands-on experience with different technologies.
+        I got into web dev because I love creating things, it’s fun to bring ideas to life and see them turn into real projects. That passion has pushed me to explore full stack development and gain hands-on experience with different technologies.
+        <br />
+        <img src="https://github-readme-streak-stats.herokuapp.com/?user=PayalVerma1&theme=tokyonight" />
+
       </>
     ),
   },
-  work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
-    experiences: [
-      {
-        company: "TOTO-AI",
-        timeframe: "2025 - Present",
-        role: "Multi-Model AI Chat Platform",
-        achievements: [
-          <>
-            This was my first Next.js project, so basically it is a multi-model AI chat platform which consists of OpenAI, Gemini, Groq, Claude, etc. models, with Grok and Gemini as free default models and others accessible via a payment gateway.
-          </>,
-          <>
-            Developed it using Next.js, TypeScript, Prisma, and PostgreSQL, and also implemented Google Authentication (NextAuth), dynamic chat titles, theme switching, etc.
-          </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.png",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        company: "YouSee",
-        timeframe: "2025",
-        role: "Assistive Web App",
-        achievements: [
-          <>
-            Built a React.js web app that helps visually challenged individuals identify and describe items using picture recognition. This was a collaborative project we created for HackHazards’25.
-          </>,
-          <>
-            Added features like webcam capture, voice command (“capture”) for interaction, and text-to-speech to read the descriptions out loud.
-          </>,
-        ],
-        images: [],
-      },
-    ],
-  },
-  
+
+
   technical: {
       display: true, // set to false to hide this section
   title: "Technical Skills",

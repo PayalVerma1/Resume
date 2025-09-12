@@ -119,12 +119,7 @@ export interface About extends BasePageConfig {
     display: boolean;
   };
   /** Calendar section configuration */
-  calendar: {
-    /** Whether to display the calendar */
-    display: boolean;
-    /** Link to the calendar */
-    link: string;
-  };
+  
   /** Introduction section */
   intro: {
     /** Whether to display the introduction */
@@ -135,34 +130,7 @@ export interface About extends BasePageConfig {
     description: React.ReactNode;
   };
   /** Work experience section */
-  work: {
-    /** Whether to display work experience */
-    display: boolean;
-    /** Title for the work experience section */
-    title: string;
-    /** List of work experiences */
-    experiences: Array<{
-      /** Company name */
-      company: string;
-      /** Timeframe of employment */
-      timeframe: string;
-      /** Role or job title */
-      role: string;
-      /** Achievements at the company */
-      achievements: React.ReactNode[];
-      /** Images related to the experience */
-      images?: Array<{
-        /** Image source path */
-        src: string;
-        /** Image alt text */
-        alt: string;
-        /** Image width ratio */
-        width: number;
-        /** Image height ratio */
-        height: number;
-      }>;
-    }>;
-  };
+ 
   // studies section fully removed
   /** Technical skills section */
   technical: {
