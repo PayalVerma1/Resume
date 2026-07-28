@@ -9,11 +9,13 @@ import {
   SmartLink,
   Text,
 } from "@once-ui-system/core";
+import styles from "./ProjectCard.module.scss";
 
 interface ProjectCardProps {
   href: string;
   priority?: boolean;
   images: string[];
+  video: string;
   title: string;
   content: string;
   description: string;
@@ -24,6 +26,7 @@ interface ProjectCardProps {
 export const ProjectCard: React.FC<ProjectCardProps> = ({
   href,
   images = [],
+  video,
   title,
   content,
   description,
@@ -32,7 +35,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <Column fillWidth gap="m">
-      {images.length > 0 && (
+      {!video && images.length > 0 && (
         <Carousel
           sizes="(max-width: 960px) 100vw, 960px"
           items={images.map((image) => ({
@@ -40,6 +43,21 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             alt: title,
           }))}
         />
+      )}
+      {video && (
+        <video
+          className={styles.video}
+          autoPlay
+          controls
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-label={`${title} project walkthrough`}
+        >
+          <source src={video} type="video/mp4" />
+          Your browser does not support embedded video.
+        </video>
       )}
       <Flex
         s={{ direction: "column" }}

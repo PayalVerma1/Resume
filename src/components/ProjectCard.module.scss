@@ -1,0 +1,8 @@
+.video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  object-fit: cover;
+  border: 1px solid var(--neutral-alpha-weak);
+  border-radius: var(--radius-l);
+}
