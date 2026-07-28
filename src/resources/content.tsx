@@ -7,7 +7,7 @@ const person: Person = {
   name: `Payal Verma`,
   role: "Full Stack Developer",
   avatar: "/images/avatar.jpg",
-  email: "payalvermaseema@gmail.com",
+  email: "payal.codes@gmail.com",
   location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
  
   languages: [], // optional: Leave the array empty if you don't want to display languages
@@ -35,7 +35,7 @@ const social: Social = [
   {
     name: "x",
     icon: "threads",
-    link: "https://x.com/Payalverma73",
+    link: "https://x.com/payal_codes",
   },
   {
     name: "Email",
@@ -75,94 +75,16 @@ const about: About = {
 
 
   technical: {
-      display: true, // set to false to hide this section
-  title: "Technical Skills",
-  skills: [
-    {
-      title: "Frontend",
-      description: (
-        <>Experienced in building responsive and interactive UIs using React.js, Next.js, Tailwind CSS, and animation libraries like Framer Motion and GSAP.</>
-      ),
-      tags: [
-        {
-          name: "React.js",
-          icon: "react",
-        },
-        {
-          name: "Next.js",
-          icon: "nextjs",
-        },
-        {
-          name: "Tailwind CSS",
-          icon: "tailwind",
-        },
-        
-        {
-          name: "GSAP",
-          icon: "gsap",
-        },
-      ],
-      images: [],
-    },
-    {
-      title: "Backend",
-      description: (
-        <>Building full stack apps using Node.js, Express.js, and Next.js with databases like MongoDB and PostgreSQL, along with Prisma ORM and authentication (NextAuth).</>
-      ),
-      tags: [
-        {
-          name: "Node.js",
-          icon: "nodejs",
-        },
-        {
-          name: "Express.js",
-          icon: "express",
-        },
-        {
-          name: "MongoDB",
-          icon: "mongodb",
-        },
-        {
-          name: "PostgreSQL",
-          icon: "postgresql",
-        },
-        {
-          name: "Prisma",
-          icon: "prisma",
-        },
-        {
-          name: "NextAuth",
-          icon: "auth",
-        },
-      ],
-      images: [],
-    },
-    {
-      title: "AI & Tools",
-      description: (
-        <>Integrated multiple AI models (OpenAI, Gemini, Groq, Claude, Grok) into chat platforms with features like streaming, Google Auth, and payment gateways.</>
-      ),
-      tags: [
-        {
-          name: "OpenAI",
-          icon: "openai",
-        },
-        {
-          name: "Gemini",
-          icon: "gemini",
-        },
-        {
-          name: "Groq",
-          icon: "groq",
-        },
-        {
-          name: "Claude",
-          icon: "claude",
-        },
-      ],
-      images: [],
-    },
-  ],
+    display: true,
+    title: "Technical Skills",
+    skills: [
+      { title: "Programming Languages", description: <>TypeScript, Java, Rust</>, tags: [], images: [] },
+      { title: "Frontend", description: <>Next.js, React.js, Redux Toolkit, Tailwind CSS, Zustand</>, tags: [], images: [] },
+      { title: "Backend", description: <>Node.js, Express.js, MongoDB, PostgreSQL, Prisma, Redis</>, tags: [], images: [] },
+      { title: "DevOps", description: <>AWS (EC2, S3), Azure App Service, GitHub Actions, CI/CD</>, tags: [], images: [] },
+      { title: "AI Tools", description: <>Codex, Claude, GitHub Copilot</>, tags: [], images: [] },
+      { title: "Other", description: <>Git/GitHub, Linux</>, tags: [], images: [] },
+    ],
   },
 // studies section removed
 };

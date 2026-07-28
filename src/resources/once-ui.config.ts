@@ -10,6 +10,7 @@ import {
   SchemaConfig,
   StyleConfig,
 } from "@/types";
+import type { NextFontWithVariable } from "next/dist/compiled/@next/font";
 
 
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
@@ -35,39 +36,15 @@ const protectedRoutes: ProtectedRoutesConfig = {
   "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
 };
 
-// Import and set font for each variant
-import { Geist } from "next/font/google";
-import { Geist_Mono } from "next/font/google";
-
-const heading = Geist({
-  variable: "--font-heading",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const body = Geist({
-  variable: "--font-body",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const label = Geist({
-  variable: "--font-label",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const code = Geist_Mono({
-  variable: "--font-code",
-  subsets: ["latin"],
-  display: "swap",
-});
+// Use the system font stack so local development and production builds do not
+// depend on fetching Google Fonts at build time.
+const systemFont = { variable: "" } as NextFontWithVariable;
 
 const fonts: FontsConfig = {
-  heading: heading,
-  body: body,
-  label: label,
-  code: code,
+  heading: systemFont,
+  body: systemFont,
+  label: systemFont,
+  code: systemFont,
 };
 
 // default customization applied to the HTML in the main layout.tsx
@@ -80,7 +57,7 @@ const style: StyleConfig = {
   solidStyle: "flat", // flat | plastic
   border: "playful", // rounded | playful | conservative
   surface: "translucent", // filled | translucent
-  transition: "all", // all | micro | macro
+  transition: "none", // all | micro | macro | none
   scaling: "100", // 90 | 95 | 100 | 105 | 110
 };
 
@@ -117,7 +94,7 @@ const effects: EffectsConfig = {
     colorEnd: "page-background",
   },
   dots: {
-    display: true,
+    display: false,
     opacity: 40,
     size: "2",
     color: "brand-background-strong",
@@ -194,7 +171,7 @@ const schema: SchemaConfig = {
 
 // social links
 const sameAs: SameAsConfig = {
-  threads: "https://x.com/Payalverma73",
+  threads: "https://x.com/payal_codes",
   linkedin: "https://www.linkedin.com/in/payalverma73/",
   discord: "https://discord.com/invite/5EyAQ4eNdS",
 };

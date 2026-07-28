@@ -86,6 +86,9 @@ export default async function RootLayout({
                       root.setAttribute('data-' + key, value);
                     }
                   });
+
+                  // Motion is intentionally disabled site-wide.
+                  root.setAttribute('data-transition', 'none');
                 } catch (e) {
                   console.error('Failed to initialize theme:', e);
                   document.documentElement.setAttribute('data-theme', 'dark');
