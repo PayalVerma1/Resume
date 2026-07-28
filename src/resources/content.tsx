@@ -78,12 +78,42 @@ const about: About = {
     display: true,
     title: "Technical Skills",
     skills: [
-      { title: "Programming Languages", description: <>TypeScript, Java, Rust</>, tags: [], images: [] },
-      { title: "Frontend", description: <>Next.js, React.js, Redux Toolkit, Tailwind CSS, Zustand</>, tags: [], images: [] },
-      { title: "Backend", description: <>Node.js, Express.js, MongoDB, PostgreSQL, Prisma, Redis</>, tags: [], images: [] },
-      { title: "DevOps", description: <>AWS (EC2, S3), Azure App Service, GitHub Actions, CI/CD</>, tags: [], images: [] },
-      { title: "AI Tools", description: <>Codex, Claude, GitHub Copilot</>, tags: [], images: [] },
-      { title: "Other", description: <>Git/GitHub, Linux</>, tags: [], images: [] },
+      {
+        title: "Programming Languages",
+        description: <>Writing reliable applications with strongly typed, object-oriented, and systems programming languages.</>,
+        tags: [{ name: "TypeScript" }, { name: "Java" }, { name: "Rust" }],
+        images: [],
+      },
+      {
+        title: "Frontend",
+        description: <>Building responsive, interactive user interfaces with modern React-based tools and state management.</>,
+        tags: [{ name: "Next.js" }, { name: "React.js" }, { name: "Redux Toolkit" }, { name: "Tailwind CSS" }, { name: "Zustand" }],
+        images: [],
+      },
+      {
+        title: "Backend",
+        description: <>Developing APIs, real-time services, and data layers with scalable server-side technologies.</>,
+        tags: [{ name: "Node.js" }, { name: "Express.js" }, { name: "MongoDB" }, { name: "PostgreSQL" }, { name: "Prisma" }, { name: "Redis" }],
+        images: [],
+      },
+      {
+        title: "DevOps",
+        description: <>Deploying and automating applications across cloud platforms and continuous delivery workflows.</>,
+        tags: [{ name: "AWS EC2" }, { name: "AWS S3" }, { name: "Azure App Service" }, { name: "GitHub Actions" }, { name: "CI/CD" }],
+        images: [],
+      },
+      {
+        title: "AI Tools",
+        description: <>Using AI coding assistants to accelerate research, implementation, and iteration.</>,
+        tags: [{ name: "Codex" }, { name: "Claude" }, { name: "GitHub Copilot" }],
+        images: [],
+      },
+      {
+        title: "Other",
+        description: <>Working comfortably with version control and Linux development environments.</>,
+        tags: [{ name: "Git" }, { name: "GitHub" }, { name: "Linux" }],
+        images: [],
+      },
     ],
   },
 // studies section removed
