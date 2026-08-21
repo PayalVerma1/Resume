@@ -51,8 +51,10 @@ const fonts: FontsConfig = {
 const style: StyleConfig = {
   theme: "system", // dark | light | system
   neutral: "gray", // sand | gray | slate | custom
-  brand: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
-  accent: "red", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
+  // Neutral brand and accent tokens keep links and article headings within the
+  // monochrome palette instead of introducing a cyan highlight.
+  brand: "custom" as unknown as StyleConfig["brand"], // The runtime supports custom schemes; its type omits it.
+  accent: "custom" as unknown as StyleConfig["accent"],
   solid: "contrast", // color | contrast
   solidStyle: "flat", // flat | plastic
   border: "playful", // rounded | playful | conservative

@@ -14,8 +14,8 @@ const projects = [
   ["YouSee", "Responsive multi-section landing page with fluid navigation and reusable components.", "React · Tailwind", "/work/automate-design-handovers-with-a-figma-to-code-pipeline"],
 ];
 const writing = [
-  ["The HTTP Streaming Trick Airbnb Used to Kill the Waterfall", "A look at the streaming pattern behind faster, more resilient page loads.", "https://x.com/payal_codes/status/2086135051788677436"],
-  ["Designing a Monitoring Platform Developers Actually Want to Use", "How to make observability tooling clear, useful, and built around developer workflows.", "https://medium.com/@payal.codes/designing-a-monitoring-platform-developers-actually-want-to-use-e27b7e2d07d4"],
+  ["The HTTP Streaming Trick Airbnb Used to Kill the Waterfall", "A look at the streaming pattern behind faster, more resilient page loads.", "X / Twitter", "https://x.com/payal_codes/status/2086135051788677436"],
+  ["Designing a Monitoring Platform Developers Actually Want to Use", "How to make observability tooling clear, useful, and built around developer workflows.", "Medium", "https://medium.com/@payal.codes/designing-a-monitoring-platform-developers-actually-want-to-use-e27b7e2d07d4"],
 ];
 
 export default function About() {
@@ -38,7 +38,7 @@ export default function About() {
       </section>
       <section className={styles.section} aria-labelledby="writing-heading">
         <div className={styles.sectionTitle}><h2 id="writing-heading">Writing</h2><Link href="/blog">All notes <span>→</span></Link></div>
-        <div className={styles.posts}>{writing.map(([title, description, href]) => <a href={href} key={title} className={styles.post} target="_blank" rel="noreferrer"><div><h3>{title}</h3><p>{description}</p></div><span aria-hidden="true">↗</span></a>)}</div>
+        <div className={styles.posts}>{writing.map(([title, description, source, href]) => <a href={href} key={title} className={styles.post} target="_blank" rel="noreferrer"><div><h3>{title}</h3><p>{description}</p><small>{source}</small></div><span>Read article <b aria-hidden="true">→</b></span></a>)}</div>
       </section>
     </main>
   );
