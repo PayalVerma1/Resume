@@ -66,5 +66,6 @@
 }
 
 [data-theme="dark"] {
-  --page-background: #000000;
+  /* Soft charcoal from the reference: less glare than pure black. */
+  --page-background: #1e1e20;
 }
