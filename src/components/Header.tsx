@@ -2,7 +2,6 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { Row } from "@once-ui-system/core";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
 
@@ -12,19 +11,7 @@ export const Header = () => {
   const pathname = usePathname();
   return (
     <header className={styles.header}>
-      <Row fillWidth horizontal="center">
-        <Row
-          className={styles.shell}
-          fillWidth
-          maxWidth="m"
-          paddingX="l"
-          paddingY="16"
-          horizontal="between"
-          vertical="center"
-        >
-          <Link className={styles.mark} href="/" aria-label="Payal Verma home">
-            PV
-          </Link>
+      <div className={styles.shell}>
           <nav className={styles.nav} aria-label="Primary navigation">
             {links.map(([label, href]) =>
               href === "/resume.pdf" ? (
@@ -41,8 +28,7 @@ export const Header = () => {
           <div className={styles.theme}>
             <ThemeToggle />
           </div>
-        </Row>
-      </Row>
+      </div>
     </header>
   );
 };
