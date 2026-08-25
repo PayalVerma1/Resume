@@ -59,30 +59,26 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           Your browser does not support embedded video.
         </video>
       )}
-      <Flex
-        s={{ direction: "column" }}
+      <Column
         fillWidth
-        paddingX="s"
         paddingTop="12"
         paddingBottom="24"
-        gap="l"
+        gap="8"
       >
         {title && (
-          <Flex flex={5}>
-            <Heading as="h2" wrap="balance" variant="heading-strong-xl">
-              {title}
-            </Heading>
-          </Flex>
+          <Heading as="h2" wrap="balance" variant="heading-strong-xl">
+            {title}
+          </Heading>
         )}
         {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
-          <Column flex={7} gap="16">
+          <Column fillWidth gap="12">
             {avatars?.length > 0 && <AvatarGroup avatars={avatars} size="m" reverse />}
             {description?.trim() && (
-              <Text wrap="balance" variant="body-default-s" onBackground="neutral-weak">
+              <Text variant="body-default-s" onBackground="neutral-weak">
                 {description}
               </Text>
             )}
-            <Flex gap="24" wrap>
+            <Flex gap="24" wrap paddingTop="4">
               {content?.trim() && (
                 <SmartLink
                   suffixIcon="arrowRight"
@@ -104,7 +100,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             </Flex>
           </Column>
         )}
-      </Flex>
+      </Column>
     </Column>
   );
 };
