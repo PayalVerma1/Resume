@@ -58,8 +58,8 @@ export default function About() {
       </section>
       <blockquote className={styles.quote}>
         <span className={styles.quoteMark} aria-hidden="true">“</span>
-        <p>You have a right to perform your prescribed duty, but you are not entitled to the fruits of actions.</p>
-        <cite>— Bhagavad Gita</cite>
+        <p>Build Break Fix & Learn</p>
+        
       </blockquote>
     </main>
   );

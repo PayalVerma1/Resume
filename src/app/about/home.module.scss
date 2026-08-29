@@ -265,6 +265,10 @@
 
 .quote {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 5.5rem;
     overflow: hidden;
     margin: 3rem 0 0;
     padding: 1.5rem 1.25rem 1.25rem;
@@ -272,6 +276,7 @@
     border-radius: .6rem;
     background: var(--surface-background);
     color: var(--type-secondary);
+    text-align: center;
 }
 
 .quoteMark {
@@ -292,6 +297,7 @@
     font-style: italic;
     letter-spacing: .01em;
     line-height: 1.65;
+    text-align: center;
 }
 
 .quote cite {
