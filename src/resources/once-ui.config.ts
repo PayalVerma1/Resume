@@ -30,11 +30,8 @@ const display: DisplayConfig = {
   themeSwitcher: true,
 };
 
-// Enable password protection on selected routes
-// Set password in the .env file, refer to .env.example
-const protectedRoutes: ProtectedRoutesConfig = {
-  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
-};
+// Password protection is disabled for all project detail pages.
+const protectedRoutes: ProtectedRoutesConfig = {};
 
 // Use the system font stack so local development and production builds do not
 // depend on fetching Google Fonts at build time.

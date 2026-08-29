@@ -3,7 +3,7 @@
     --type-secondary: var(--neutral-on-background-medium);
     --type-tertiary: var(--neutral-on-background-weak);
     width: min(100%, 640px);
-    padding: 0.5rem 1.5rem 4.5rem;
+    padding: 0.5rem 1.5rem 1.5rem;
     color: var(--type-primary);
 }
 
@@ -19,13 +19,13 @@
     border-radius: 50%;
     object-fit: cover;
     background: var(--neutral-background-weak);
-    border: 2.5px solid #FACC15;
-    box-shadow: 0 0 14px rgba(250, 204, 21, 0.25);
+    border: none;
+    box-shadow: none;
     transition: transform 200ms ease, box-shadow 200ms ease;
 
     &:hover {
       transform: scale(1.03);
-      box-shadow: 0 0 20px rgba(250, 204, 21, 0.4);
+      box-shadow: none;
     }
 }
 
@@ -103,6 +103,7 @@
     padding: .5rem .72rem;
     border: 1px solid var(--neutral-alpha-medium);
     border-radius: .45rem;
+    background: var(--surface-background);
     color: var(--type-secondary);
     font-size: .83rem;
     text-decoration: none;
@@ -163,6 +164,7 @@
     padding: 1rem;
     border: 1px solid var(--neutral-alpha-medium);
     border-radius: .6rem;
+    background: var(--surface-background);
     color: inherit;
     text-decoration: none;
     transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
@@ -244,6 +246,7 @@
     padding: .5rem .75rem;
     border: 1px solid var(--neutral-alpha-medium);
     border-radius: .45rem;
+    background: var(--surface-background);
     color: var(--type-secondary);
     font-size: .81rem;
     text-decoration: none;
@@ -267,6 +270,7 @@
     padding: 1.5rem 1.25rem 1.25rem;
     border: 1px solid var(--neutral-alpha-medium);
     border-radius: .6rem;
+    background: var(--surface-background);
     color: var(--type-secondary);
 }
 
