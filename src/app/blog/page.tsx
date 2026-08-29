@@ -1,5 +1,6 @@
-import { Column, Heading, Meta, Schema, SmartLink, Text } from "@once-ui-system/core";
-import { baseURL, blog, person} from "@/resources";
+import { Meta, Schema } from "@once-ui-system/core";
+import { baseURL, blog, person } from "@/resources";
+import styles from "./blog.module.scss";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -13,7 +14,7 @@ export async function generateMetadata() {
 
 export default function Blog() {
   return (
-    <Column maxWidth="m" paddingTop="0" gap="xl" paddingX="l" style={{ maxWidth: "640px", width: "100%" }}>
+    <main className={styles.page}>
       <Schema
         as="blogPosting"
         baseURL={baseURL}
@@ -27,39 +28,33 @@ export default function Blog() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Column gap="32" fillWidth>
-        <Column gap="s" fillWidth>
-          <Heading variant="heading-strong-xl">
-            The HTTP Streaming Trick Airbnb Used to Kill the Waterfall
-          </Heading>
-          <Text variant="body-default-l" onBackground="neutral-weak">
-            A look at the streaming pattern behind faster, more resilient page loads.
-          </Text>
-          <SmartLink
-            href="https://x.com/payal_codes/status/2086135051788677436"
-            suffixIcon="arrowUpRightFromSquare"
-          >
-            <Text variant="body-default-m">Read on X / Twitter</Text>
-          </SmartLink>
-        </Column>
-
-        <Column gap="s" fillWidth>
-          <Heading variant="heading-strong-xl">
-            Designing a Monitoring Platform Developers Actually Want to Use
-          </Heading>
-          <Text variant="body-default-l" onBackground="neutral-weak">
-            Keo is an observability platform for monitoring metrics, logs, and deployments with
-            AI-powered anomaly detection. This article covers the product decisions behind making
-            that workflow practical for developers.
-          </Text>
-          <SmartLink
-            href="https://medium.com/@payal.codes/designing-a-monitoring-platform-developers-actually-want-to-use-e27b7e2d07d4"
-            suffixIcon="arrowUpRightFromSquare"
-          >
-            <Text variant="body-default-m">Read the Keo article on Medium</Text>
-          </SmartLink>
-        </Column>
-      </Column>
-    </Column>
+      <header className={styles.heading}>
+        <p>Notes &amp; articles</p>
+        <h1>Writing</h1>
+        <span>Things I am learning about product, engineering, and the web.</span>
+      </header>
+      <section className={styles.list} aria-label="Articles">
+        <article className={styles.card}>
+          <div>
+            <p className={styles.source}>X / Twitter</p>
+            <h2>The HTTP Streaming Trick Airbnb Used to Kill the Waterfall</h2>
+            <p className={styles.description}>A look at the streaming pattern behind faster, more resilient page loads.</p>
+          </div>
+          <a href="https://x.com/payal_codes/status/2086135051788677436" target="_blank" rel="noreferrer">
+            Read article <span aria-hidden="true">↗</span>
+          </a>
+        </article>
+        <article className={styles.card}>
+          <div>
+            <p className={styles.source}>Medium</p>
+            <h2>Designing a Monitoring Platform Developers Actually Want to Use</h2>
+            <p className={styles.description}>Keo is an observability platform for monitoring metrics, logs, and deployments with AI-powered anomaly detection. This article covers the product decisions behind making that workflow practical for developers.</p>
+          </div>
+          <a href="https://medium.com/@payal.codes/designing-a-monitoring-platform-developers-actually-want-to-use-e27b7e2d07d4" target="_blank" rel="noreferrer">
+            Read article <span aria-hidden="true">↗</span>
+          </a>
+        </article>
+      </section>
+    </main>
   );
 }

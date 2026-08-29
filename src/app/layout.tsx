@@ -151,7 +151,7 @@ export default async function RootLayout({
             />
           </RevealFx>
           <Header />
-          <Flex zIndex={0} fillWidth padding="l" horizontal="center" flex={1} style={{ paddingTop: "5.5rem" }}>
+          <Flex zIndex={0} fillWidth padding="l" horizontal="center" style={{ paddingTop: "5.5rem" }}>
             <Flex horizontal="center" fillWidth minHeight="0">
               <RouteGuard>{children}</RouteGuard>
             </Flex>

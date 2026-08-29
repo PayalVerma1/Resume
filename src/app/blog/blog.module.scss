@@ -1,0 +1,115 @@
+.page {
+  width: min(100%, 640px);
+  padding: .5rem 1.5rem 1.5rem;
+}
+
+.heading {
+  margin-bottom: 1.75rem;
+}
+
+.heading p,
+.source {
+  margin: 0;
+  color: var(--neutral-on-background-weak);
+  font-size: .74rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.heading h1 {
+  margin: .35rem 0 .45rem;
+  color: var(--neutral-on-background-strong);
+  font-size: 1.55rem;
+  letter-spacing: -.035em;
+  line-height: 1.15;
+}
+
+.heading span {
+  color: var(--neutral-on-background-medium);
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+.list {
+  display: grid;
+  gap: .8rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  padding: 1.15rem;
+  border: 1px solid var(--neutral-alpha-medium);
+  border-radius: .6rem;
+  background: var(--surface-background);
+  transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.card:hover {
+  background: var(--neutral-alpha-weak);
+  border-color: var(--neutral-alpha-strong);
+  transform: translateY(-2px);
+}
+
+.card h2 {
+  margin: .45rem 0 0;
+  color: var(--neutral-on-background-strong);
+  font-size: 1.02rem;
+  letter-spacing: -.015em;
+  line-height: 1.35;
+}
+
+.description {
+  margin: .45rem 0 0;
+  color: var(--neutral-on-background-medium);
+  font-size: .85rem;
+  line-height: 1.55;
+}
+
+.card a {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: .5rem .7rem;
+  border: 1px solid var(--neutral-alpha-medium);
+  border-radius: .45rem;
+  color: var(--neutral-on-background-medium);
+  font-size: .8rem;
+  text-decoration: none;
+  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+
+.card a:hover {
+  color: var(--neutral-on-background-strong);
+  background: var(--surface-background);
+  border-color: var(--neutral-alpha-strong);
+}
+
+.card a span {
+  margin-left: .35rem;
+}
+
+.card a:focus-visible {
+  outline: 2px solid var(--brand-on-background-strong);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card a {
+    transition: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: .5rem 1.25rem 1.5rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}
