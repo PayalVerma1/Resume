@@ -19,6 +19,14 @@
     border-radius: 50%;
     object-fit: cover;
     background: var(--neutral-background-weak);
+    border: 2.5px solid #FACC15;
+    box-shadow: 0 0 14px rgba(250, 204, 21, 0.25);
+    transition: transform 200ms ease, box-shadow 200ms ease;
+
+    &:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(250, 204, 21, 0.4);
+    }
 }
 
 .intro h1 {
@@ -33,6 +41,31 @@
     margin: .35rem 0 0;
     color: var(--type-tertiary);
     font-size: .88rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.statusBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 9999px;
+    background: rgba(34, 197, 94, 0.14);
+    border: 1px solid rgba(34, 197, 94, 0.35);
+    color: #4ADE80;
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.statusDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #22C55E;
+    box-shadow: 0 0 6px #22C55E;
 }
 
 .role a {
@@ -64,13 +97,22 @@
 }
 
 .socials a {
-    color: var(--type-tertiary);
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.5rem;
+    padding: .5rem .72rem;
+    border: 1px solid var(--neutral-alpha-medium);
+    border-radius: .45rem;
+    color: var(--type-secondary);
     font-size: .83rem;
     text-decoration: none;
+    transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
 }
 
 .socials a:hover {
     color: var(--type-primary);
+    background: var(--neutral-alpha-weak);
+    border-color: var(--neutral-alpha-strong);
 }
 
 .socials b {
@@ -118,15 +160,25 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr) 10.5rem;
     gap: 1rem;
-    padding: .95rem 0;
+    padding: 1rem;
+    border: 1px solid var(--neutral-alpha-medium);
+    border-radius: .6rem;
     color: inherit;
     text-decoration: none;
-    transition: opacity 160ms ease;
+    transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
 }
 
 .project:hover,
 .post:hover {
-    opacity: .72;
+    background: var(--neutral-alpha-weak);
+    border-color: var(--neutral-alpha-strong);
+    transform: translateY(-2px);
+}
+
+.projects,
+.posts {
+    display: grid;
+    gap: .7rem;
 }
 
 .project h3,
@@ -179,7 +231,74 @@
     font-weight: 400;
 }
 
-.socials a,
+.showMore {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.showMore a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.5rem;
+    padding: .5rem .75rem;
+    border: 1px solid var(--neutral-alpha-medium);
+    border-radius: .45rem;
+    color: var(--type-secondary);
+    font-size: .81rem;
+    text-decoration: none;
+    transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+
+.showMore a:hover {
+    color: var(--type-primary);
+    background: var(--neutral-alpha-weak);
+    border-color: var(--neutral-alpha-strong);
+}
+
+.showMore span {
+    margin-left: .35rem;
+}
+
+.quote {
+    position: relative;
+    overflow: hidden;
+    margin: 3rem 0 0;
+    padding: 1.5rem 1.25rem 1.25rem;
+    border: 1px solid var(--neutral-alpha-medium);
+    border-radius: .6rem;
+    color: var(--type-secondary);
+}
+
+.quoteMark {
+    position: absolute;
+    top: -.35rem;
+    left: .75rem;
+    color: var(--neutral-alpha-medium);
+    font-size: 5rem;
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.quote p {
+    position: relative;
+    max-width: 34rem;
+    margin: 0;
+    font-size: .92rem;
+    font-style: italic;
+    letter-spacing: .01em;
+    line-height: 1.65;
+}
+
+.quote cite {
+    display: block;
+    margin-top: .65rem;
+    color: var(--type-tertiary);
+    font-size: .78rem;
+    font-style: italic;
+    text-align: right;
+}
+
 .sectionTitle a,
 .role a {
     transition: color 160ms ease;
@@ -191,7 +310,8 @@
     .post,
     .socials a,
     .sectionTitle a,
-    .role a {
+    .role a,
+    .showMore a {
         transition: none;
     }
 }
@@ -200,7 +320,8 @@
 .sectionTitle a:focus-visible,
 .role a:focus-visible,
 .project:focus-visible,
-.post:focus-visible {
+.post:focus-visible,
+.showMore a:focus-visible {
     outline: 2px solid var(--brand-on-background-strong);
     outline-offset: 3px;
     border-radius: .2rem;
@@ -230,5 +351,13 @@
 
     .projectMeta span {
         display: none;
+    }
+
+    .post > span {
+        font-size: 0;
+    }
+
+    .post > span b {
+        font-size: .9rem;
     }
 }

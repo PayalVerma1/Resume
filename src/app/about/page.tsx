@@ -24,22 +24,43 @@ export default function About() {
       <Schema as="webPage" baseURL={baseURL} title={`Home – ${person.name}`} description="Full stack developer building thoughtful digital products." path="/" author={{ name: person.name, url: baseURL, image: `${baseURL}${person.avatar}` }} />
       <section className={styles.intro} aria-labelledby="intro-heading">
         <Image className={styles.avatar} src={person.avatar} alt={`Portrait of ${person.name}`} width={92} height={92} priority />
-        <div><h1 id="intro-heading">Payal Verma</h1><p className={styles.role}>Full stack developer · India · <a href="mailto:payal.codes@gmail.com">payal.codes@gmail.com</a></p></div>
+        <div>
+          <h1 id="intro-heading">Payal Verma</h1>
+          <p className={styles.role}>
+            Full stack developer · India
+            <span className={styles.statusBadge}>
+              <span className={styles.statusDot} />
+              Working
+            </span>
+          </p>
+          <p className={styles.role} style={{ marginTop: "0.2rem" }}>
+            <a href="mailto:payal.codes@gmail.com">payal.codes@gmail.com</a>
+          </p>
+        </div>
       </section>
       <section className={styles.about} aria-label="Introduction">
         <p>I build clean, useful web experiences from the first sketch to production. I enjoy turning complex ideas into interfaces that feel simple.</p>
         <nav className={styles.socials} aria-label="Social links">
-          <a href="https://github.com/PayalVerma1" target="_blank" rel="noreferrer">GitHub <b>↗</b></a><a href="https://x.com/payal_codes" target="_blank" rel="noreferrer">X / Twitter <b>↗</b></a><a href="mailto:payal.codes@gmail.com">Email <b>↗</b></a>
+          <a href="https://github.com/PayalVerma1" target="_blank" rel="noreferrer">GitHub <b aria-hidden="true">↗</b></a>
+          <a href="https://x.com/payal_codes" target="_blank" rel="noreferrer">X / Twitter <b aria-hidden="true">↗</b></a>
+          <a href="mailto:payal.codes@gmail.com">Email <b aria-hidden="true">↗</b></a>
         </nav>
       </section>
       <section className={styles.section} aria-labelledby="projects-heading">
-        <div className={styles.sectionTitle}><h2 id="projects-heading">Projects</h2><Link href="/work">All projects <span>→</span></Link></div>
+        <div className={styles.sectionTitle}><h2 id="projects-heading">Projects</h2></div>
         <div className={styles.projects}>{projects.map(([title, detail, stack, href]) => <Link href={href} key={title} className={styles.project}><div><h3>{title}</h3><p>{detail}</p></div><div className={styles.projectMeta}><span>{stack}</span><b aria-hidden="true">↗</b></div></Link>)}</div>
+        <div className={styles.showMore}><Link href="/work">Show more projects <span aria-hidden="true">→</span></Link></div>
       </section>
       <section className={styles.section} aria-labelledby="writing-heading">
-        <div className={styles.sectionTitle}><h2 id="writing-heading">Writing</h2><Link href="/blog">All notes <span>→</span></Link></div>
+        <div className={styles.sectionTitle}><h2 id="writing-heading">Writing</h2></div>
         <div className={styles.posts}>{writing.map(([title, description, source, href]) => <a href={href} key={title} className={styles.post} target="_blank" rel="noreferrer"><div><h3>{title}</h3><p>{description}</p><small>{source}</small></div><span>Read article <b aria-hidden="true">→</b></span></a>)}</div>
+        <div className={styles.showMore}><Link href="/blog">Show more writing <span aria-hidden="true">→</span></Link></div>
       </section>
+      <blockquote className={styles.quote}>
+        <span className={styles.quoteMark} aria-hidden="true">“</span>
+        <p>You have a right to perform your prescribed duty, but you are not entitled to the fruits of actions.</p>
+        <cite>— Bhagavad Gita</cite>
+      </blockquote>
     </main>
   );
 }

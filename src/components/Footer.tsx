@@ -1,48 +1,43 @@
-import { Row, IconButton, SmartLink, Text } from "@once-ui-system/core";
-import { person, social } from "@/resources";
+import { person } from "@/resources";
+import {
+  FaXTwitter,
+  FaGithub,
+  FaEnvelope,
+} from "react-icons/fa6";
 import styles from "./Footer.module.scss";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const socialLinks = [
+    { name: "X (Twitter)", icon: <FaXTwitter />, href: "https://x.com/payal_codes" },
+    { name: "GitHub", icon: <FaGithub />, href: "https://github.com/PayalVerma1" },
+    { name: "Email", icon: <FaEnvelope />, href: `mailto:${person.email}` },
+  ];
+
   return (
-    <Row as="footer" fillWidth paddingY="8" horizontal="center" s={{ direction: "column" }}>
-      <Row
-        className={styles.mobile}
-        maxWidth="m"
-        fillWidth
-        paddingY="8"
-        paddingX="l"
-        gap="16"
-        horizontal="center"
-        vertical="center"
-        s={{
-          direction: "column",
-          horizontal: "center",
-          align: "center",
-        }}
-      >
-        <Text variant="body-default-s" onBackground="neutral-strong">
-          <Text onBackground="neutral-weak">© {currentYear} /</Text>
-          <Text paddingX="4">{person.name}</Text>
-         </Text>
-        <Row gap="16">
-          {social.map(
-            (item) =>
-              item.link && (
-                <IconButton
-                  key={item.name}
-                  href={item.link}
-                  icon={item.icon}
-                  tooltip={item.name}
-                  size="s"
-                  variant="ghost"
-                />
-              ),
-          )}
-        </Row>
-      </Row>
-      <Row height="80" hide s={{ hide: false }} />
-    </Row>
+    <footer className={styles.footerContainer}>
+      <div className={styles.footerInner}>
+        <div className={styles.socialGrid} aria-label="Connect with Payal">
+          {socialLinks.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              target={item.href.startsWith("http") ? "_blank" : undefined}
+              rel={item.href.startsWith("http") ? "noreferrer" : undefined}
+              title={item.name}
+              aria-label={item.name}
+              className={styles.socialBox}
+            >
+              {item.icon}
+            </a>
+          ))}
+        </div>
+        <div className={styles.divider} />
+        <div className={styles.copyrightRow}>
+          <p>© {currentYear} {person.name}. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
   );
 };

@@ -1,7 +1,69 @@
-@use "./breakpoints.scss" as breakpoints;
+.footerContainer {
+  width: 100%;
+  border-top: 1px solid var(--neutral-alpha-weak, rgba(255, 255, 255, 0.08));
+  padding: 1.25rem 1.5rem;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+}
 
-@media (max-width: breakpoints.$s) {
-  .mobile {
-    text-align: center;
+.footerInner {
+  width: min(100%, 640px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .85rem;
+}
+
+.socialGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+.socialBox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--neutral-alpha-weak, rgba(255, 255, 255, 0.04));
+  border: 1px solid var(--neutral-alpha-medium, rgba(255, 255, 255, 0.08));
+  color: var(--neutral-on-background-medium, #d4d4d8);
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    background: var(--neutral-alpha-medium, rgba(255, 255, 255, 0.1));
+    border-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--brand-on-background-strong, #ffffff);
+    outline-offset: 3px;
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--neutral-alpha-weak, rgba(255, 255, 255, 0.06));
+}
+
+.copyrightRow {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--neutral-on-background-weak, #71717a);
+  margin: 0;
+
+  p {
+    margin: 0;
   }
 }
